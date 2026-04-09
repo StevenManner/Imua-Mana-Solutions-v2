@@ -1,7 +1,7 @@
 ---
-title: 'About'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'About Us'
+description: 'Meet Jeff, the founder of Imua Mana Solutions LLC — a licensed master electrician with 28+ years of experience now bringing solar and energy independence to Puna and the Big Island of Hawai''i.'
+preloadImg: '/assets/images/construction.jpg'
 permalink: 'about/'
 eleventyNavigation:
     key: About Us
@@ -12,51 +12,169 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css">
+    <style>
+        #about-story { padding: var(--sectionPadding); }
+        #about-story .cs-container {
+            width: 92%; max-width: 80rem; margin: auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: start;
+        }
+        @media (max-width: 900px) {
+            #about-story .cs-container { grid-template-columns: 1fr; gap: 2rem; }
+        }
+        #about-story .cs-images { position: relative; padding-bottom: 3rem; }
+        #about-story .cs-picture1 { display: block; width: 80%; border-radius: 0.5rem; overflow: hidden; }
+        #about-story .cs-picture2 {
+            display: block; width: 55%; border-radius: 0.5rem; overflow: hidden;
+            position: absolute; bottom: 0; right: 0; border: 4px solid #fff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        #about-story .cs-picture1 img,
+        #about-story .cs-picture2 img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        #about-story .cs-content p { margin-bottom: 1.25rem; }
+
+        #experience-grid { padding: var(--sectionPadding); background: #f7f7f7; }
+        #experience-grid .cs-container { width: 92%; max-width: 80rem; margin: auto; }
+        #experience-grid .cs-content { text-align: center; margin-bottom: 3rem; }
+        #experience-grid .cs-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;
+        }
+        #experience-grid .cs-card {
+            background: #fff; padding: 1.5rem; border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        #experience-grid .cs-h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--headerColor); }
+        #experience-grid .cs-p { font-size: 0.9rem; color: var(--bodyTextColor); line-height: 1.6em; }
+
+        #innovation { padding: var(--sectionPadding); }
+        #innovation .cs-container { width: 92%; max-width: 56rem; margin: auto; }
+        #innovation .cs-highlight {
+            background: var(--primary); color: #fff; padding: 2.5rem; margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        #innovation .cs-highlight p { color: rgba(255,255,255,0.9); margin-bottom: 1rem; }
+        #innovation .cs-highlight p:last-child { margin-bottom: 0; }
+        #innovation .cs-highlight strong { color: #f5a623; }
+    </style>
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
 
     <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
+        <h1 id="home-h">About Imua Mana Solutions</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="Electrical work on the Big Island" loading="eager" width="2500" height="1667">
         </picture>
-
     </section>
 
     <!-- ============================================ -->
-    <!--                 Side By Side                 -->
+    <!--                  Our Story                   -->
     <!-- ============================================ -->
 
-    <section id="sbs">
+    <section id="about-story">
         <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
+            <div class="cs-images">
+                <picture class="cs-picture1">
                     <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
                     <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="Solar system installation" loading="lazy" width="400" height="563">
                 </picture>
-                <picture class="cs-picture cs-picture2">
+                <picture class="cs-picture2">
                     <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
                     <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="Electrical contracting work" loading="lazy" width="400" height="563">
                 </picture>
             </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
+            <div class="cs-content">
+                <span class="cs-topper">Our Story</span>
+                <h2 class="cs-title">We Chose Puna. Now We're Helping Power It.</h2>
                 <p class="cs-text">
-Welcome to Imua Mana Solutions LLC! My name is Jeff, and I am the founder and driving force behind our company. With 28 years of experience as a Licensed Electrical Contractor and Master Electrician, I bring a wealth of knowledge and expertise to every project we undertake.                
-           <div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+                    My name is {{ client.about.ownerName }}, and I'm the founder of Imua Mana Solutions LLC. I've spent 28+ years as a licensed Master Electrician and Electrical Contractor — working across industrial grain and chemical facilities, wastewater treatment plants, food packaging operations, commercial buildings, hospitals, and residential projects across the Midwest.
+                </p>
+                <p class="cs-text">
+                    Over the last several years, I shifted my focus to green energy — solar, battery storage, off-grid systems, and the products that make energy independence actually work. I became certified across all the major platforms: Tesla, Enphase, Generac, Sol-Ark, SMA, SolarEdge, Outback. I designed and built systems at residential, commercial, and utility scale.
+                </p>
+                <p class="cs-text">
+                    Then my family and I decided to go further. We tried to go off-grid on the mainland. We ran into the wall that most people run into — strict codes, limited resources, and too few contractors who actually understood what we were trying to do. That experience pushed us toward a different path.
+                </p>
+                <p class="cs-text">
+                    We chose Puna. We purchased land here, built our base of operations, and started building our own systems. And quickly realized: this community needs what we know how to do. Energy independence isn't a lifestyle statement in Puna — it's a real, practical need. Power outages, propane dependence, high utility costs, remote properties. We're here to help solve all of it.
+                </p>
+                <a href="/contact" class="cs-button-solid">Work With Us</a>
             </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Experience Grid                  -->
+    <!-- ============================================ -->
+
+    <section id="experience-grid">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">28+ Years of Work</span>
+                <h2 class="cs-title">Industries We've Served</h2>
+                <p class="cs-text" style="margin: 0 auto;">
+                    Before going all-in on renewable energy, {{ client.about.ownerName }} built an electrical career that spans some of the most demanding environments in the industry.
+                </p>
+            </div>
+            <div class="cs-grid">
+                <div class="cs-card">
+                    <h3 class="cs-h3">Solar & Renewable Energy</h3>
+                    <p class="cs-p">Residential, commercial, and utility-scale solar. Grid-tied, hybrid, and fully off-grid. Battery storage systems. Tesla, Enphase, Generac, Sol-Ark, SMA, SolarEdge, Outback.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Grain & Chemical Processing</h3>
+                    <p class="cs-p">Designed the electrical distribution, control, and protection systems for a 3MW co-generation facility powering a 48,000 bushel/day soybean processing plant — 100% off-grid for over 4 years.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Automation & Controls</h3>
+                    <p class="cs-p">PLC panel design, build, and installation. PLC and HMI programming. Motor control panels. UL508A Industrial Control Panel certification. VFDs, encoders, SCADA systems.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Wastewater Treatment</h3>
+                    <p class="cs-p">Systems integration, power distribution, lift stations, and generators. Sequencing batch reactor PLC and MMI design. Government compliance documentation.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Commercial & Industrial</h3>
+                    <p class="cs-p">Hospitals, clinics, schools, universities, office buildings, retail locations, and manufacturing facilities. Full-scope electrical from design through commissioning.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Food Processing & Packaging</h3>
+                    <p class="cs-p">Robotic palletizer programming (100+ patterns), weighing and bagging systems, conveyor controls, cut-to-length systems, and perishable food processing facilities.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Residential</h3>
+                    <p class="cs-p">Multi-family and senior living, new construction, remodeling, troubleshooting, repair, panel upgrades. And yes — even an Earthship electrical system.</p>
+                </div>
+                <div class="cs-card">
+                    <h3 class="cs-h3">Instrumentation</h3>
+                    <p class="cs-p">Installation and calibration of pressure, temperature, flow, and level transmitters. Materials specification and procurement. Full project management and engineering design review.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Innovation                   -->
+    <!-- ============================================ -->
+
+    <section id="innovation">
+        <div class="cs-container">
+            <span class="cs-topper">What's Next</span>
+            <h2 class="cs-title">We're Building the Future of Big Island Energy</h2>
+            <p class="cs-text">
+                Imua Mana Solutions is more than a service company. Our land in Puna is our home, our office, and our laboratory — and we're actively developing new products designed specifically for Big Island properties.
+            </p>
+            <div class="cs-highlight">
+                <p><strong>Residential Thermal Storage System:</strong> Once your solar batteries are fully charged, where does the excess power go? Most systems just let it sit. We're developing a system that redirects that excess PV energy into a thermal medium — recovering the heat for water heating, cooking, dehumidification, air cooling, and more. This dramatically reduces dependence on propane and fossil fuels.</p>
+                <p><strong>Residential-Scale STATCOM / FACTS Device:</strong> A second R&D focus is a residential-scale grid stability device. In an off-grid context, this device extends battery runtime and lifetime. On a connected grid, if adopted at scale, the cost savings to power generation utilities are enormous. We're working on making this accessible for individual homes.</p>
+            </div>
+            <p class="cs-text">
+                The possibilities in Hawai'i are genuinely exciting. We're here to be part of this island's energy future — not just install panels and move on.
+            </p>
         </div>
     </section>
 

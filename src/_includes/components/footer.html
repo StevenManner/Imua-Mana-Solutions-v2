@@ -1,17 +1,17 @@
-Footer · HTML
 <!-- ============================================ -->
-<!--                   Contact                    -->
+<!--                  Contact                     -->
 <!-- ============================================ -->
 
 <section id="contact-1392">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
-            <h2 class="cs-title">Get in Touch</h2>
+            <span class="cs-topper">Get In Touch</span>
+            <h2 class="cs-title">Let's Talk About Your Energy Goals</h2>
             <p class="cs-text">
-                {{ client.tagline }} We'd love to hear from you! Whether you have questions about our menu, want to place a catering order, or need to make a reservation, we're here to help.
+                {{ client.tagline }} — We'd love to learn about your property and your power needs. Whether you're planning a full solar system, need an electrical contractor, or just want straight answers before you commit to anything, we're here.
             </p>
             <ul class="cs-ul">
+                {% if client.phoneFormatted %}
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
                         <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-76.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
@@ -21,6 +21,7 @@ Footer · HTML
                         <a href="tel:{{ client.phoneForTel }}" class="cs-link">{{ client.phoneFormatted }}</a>
                     </div>
                 </li>
+                {% endif %}
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
                         <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg" alt="email icon" class="cs-icon" width="40" height="40" decoding="async">
@@ -32,22 +33,29 @@ Footer · HTML
                 </li>
                 <li class="cs-li">
                     <picture class="cs-icon-wrapper">
-                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pin-76.svg" alt="location icon" class="cs-icon" width="40" height="40" decoding="async">
                     </picture>
                     <div class="cs-flex-group">
-                        <span class="cs-header">Address</span>
-                        <a href="{{ client.address.mapLink }}" class="cs-link" target="_blank" rel="noopener">
-                            {{ client.address.lineOne }}<br>
-                            {% if client.address.lineTwo %}{{ client.address.lineTwo }}<br>{% endif %}
-                            {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}
-                        </a>
+                        <span class="cs-header">Service Area</span>
+                        <span class="cs-link">{{ client.serviceArea }}</span>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/clock-76.svg" alt="hours icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Hours</span>
+                        <span class="cs-link">{{ client.hours }}</span>
                     </div>
                 </li>
             </ul>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-1392" name="Contact Form" method="post">
-            <h3 class="cs-h3">Send Us a Message</h3>
+        <form class="cs-form" id="cs-form-1392" name="Contact Form" method="post" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="Contact Form">
+            <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+            <h3 class="cs-h3">Request a Free Consultation</h3>
             <label class="cs-label">
                 Name
                 <input class="cs-input" required type="text" id="name-1392" name="name" placeholder="Your Name">
@@ -58,16 +66,16 @@ Footer · HTML
             </label>
             <label class="cs-label cs-phone">
                 Phone
-                <input class="cs-input" required type="tel" id="phone-1392" name="phone" placeholder="Your Phone">
+                <input class="cs-input" type="tel" id="phone-1392" name="phone" placeholder="Your Phone">
             </label>
             <label class="cs-label">
-                Message
-                <textarea class="cs-input cs-textarea" required name="Message" id="message-1392" placeholder="How can we help you?"></textarea>
+                How can we help?
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1392" placeholder="Tell us about your property and your energy goals..."></textarea>
             </label>
             <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
         </form>
     </div>
-</section> 
+</section>
 
 
 <!-- ============================================ -->
@@ -77,47 +85,42 @@ Footer · HTML
 <footer id="footer-1392">
     <div class="cs-container">
         <div class="cs-top">
-            <a aria-label="go back to home" class="cs-logo" href="#hero">
-                </a>
+            <a aria-label="go back to home" class="cs-logo" href="/">
+                <span style="font-size:1.2rem;font-weight:900;color:#fff;letter-spacing:-0.02em;">{{ client.name }}</span>
+            </a>
             <ul class="cs-ul">
-                <li class="cs-li">
-                    <a href="/" class="cs-link">Home</a>
-                </li>
-                <li class="cs-li">
-                    <a href="/about" class="cs-link">About</a>
-                </li>
-                <li class="cs-li">
-                    <a href="/services" class="cs-link">Services</a>
-                </li>
-                <li class="cs-li">
-                    <a href="/gallery" class="cs-link">Gallery</a>
-                </li>
-                <li class="cs-li">
-                    <a href="/contact" class="cs-link">Contact</a>
-                </li>
+                <li class="cs-li"><a href="/" class="cs-link">Home</a></li>
+                <li class="cs-li"><a href="/services" class="cs-link">Services</a></li>
+                <li class="cs-li"><a href="/about" class="cs-link">About</a></li>
+                <li class="cs-li"><a href="/faq" class="cs-link">FAQ</a></li>
+                <li class="cs-li"><a href="/contact" class="cs-link">Contact</a></li>
             </ul>
         </div>
         <div class="cs-bottom">
-            <!--Social-->
             <ul class="cs-social">
+                {% if client.social.facebook %}
                 <li class="cs-social-li">
                     <a href="{{ client.social.facebook }}" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
                         <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-white1.svg" alt="facebook" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
+                {% endif %}
+                {% if client.social.instagram %}
                 <li class="cs-social-li">
                     <a href="{{ client.social.instagram }}" class="cs-social-link" aria-label="instagram" target="_blank" rel="noopener">
                         <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram.svg" alt="instagram" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
                     </a>
                 </li>
-             
+                {% endif %}
             </ul>
             <span class="cs-copyright">
-                © Copyright 2026 - <a href="{{ client.domain }}" class="cs-copyright-link">{{ client.name }}</a>
+                © Copyright 2026 — <a href="{{ client.domain }}" class="cs-copyright-link">{{ client.name }}</a>
+                <span class="cs-separater">|</span>
+                Serving {{ client.serviceArea }}
             </span>
             <div class="cs-flex">
                 <span class="cs-hours">{{ client.hours }}</span>
             </div>
         </div>
     </div>
-</footer>            
+</footer>

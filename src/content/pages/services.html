@@ -1,0 +1,262 @@
+---
+title: 'Solar Installation, Electrical Contracting & Energy Services'
+description: 'Imua Mana Solutions offers complete solar system design and installation, master electrician services, energy efficiency surveys, and generator systems for Puna and the Big Island of Hawai''i.'
+preloadImg: '/assets/images/construction.jpg'
+permalink: 'services/'
+eleventyNavigation:
+    key: Services
+    order: 150
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <style>
+        #services-hero { padding: var(--sectionPadding); padding-top: calc(var(--sectionPadding) + 8.5rem); background: #f7f7f7; }
+        #services-hero .cs-container { width: 92%; max-width: 56rem; margin: auto; text-align: center; }
+
+        .service-section { padding: var(--sectionPadding); }
+        .service-section:nth-child(even) { background: #f7f7f7; }
+        .service-section .cs-container {
+            width: 92%; max-width: 80rem; margin: auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: center;
+        }
+        .service-section.reverse .cs-container { direction: rtl; }
+        .service-section.reverse .cs-content { direction: ltr; }
+        .service-section.reverse .cs-image { direction: ltr; }
+        @media (max-width: 900px) {
+            .service-section .cs-container { grid-template-columns: 1fr; direction: ltr; }
+        }
+        .service-section .cs-image {
+            border-radius: 0.5rem; overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .service-section .cs-image img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 360px; }
+        .service-section .cs-anchor { display: block; position: relative; top: -6rem; visibility: hidden; }
+        .service-section .cs-brand-list { margin: 1.5rem 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .service-section .cs-brand-tag {
+            font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+            padding: 0.35rem 0.8rem; background: #f0faf4; color: var(--primary);
+            border: 1px solid #b8dfc9; border-radius: 2rem;
+        }
+        .service-section .cs-detail-list { margin: 1.25rem 0 1.75rem; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+        .service-section .cs-detail-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.95rem; color: var(--bodyTextColor); }
+        .service-section .cs-dot { width: 0.5rem; height: 0.5rem; background: var(--secondary); border-radius: 50%; flex-shrink: 0; margin-top: 0.45rem; }
+
+        #services-note { padding: var(--sectionPadding); background: var(--primary); }
+        #services-note .cs-container { width: 92%; max-width: 56rem; margin: auto; text-align: center; }
+        #services-note .cs-title, #services-note .cs-topper { color: #fff; }
+        #services-note .cs-topper { color: #f5a623; }
+        #services-note .cs-text { color: rgba(255,255,255,0.88); margin: 0 auto 2rem; }
+        #services-note .cs-button-solid { background: #f5a623; color: #1a1a1a; }
+        #services-note .cs-button-solid:hover { color: #fff; }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <section id="int-hero">
+        <h1 id="home-h">Our Services</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/construction-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="Solar and electrical work on the Big Island" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--        Solar & Battery Storage               -->
+    <!-- ============================================ -->
+
+    <section class="service-section" id="solar">
+        <span class="cs-anchor" id="solar-anchor"></span>
+        <div class="cs-container">
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/cabinets2.jpg" alt="Solar panel and battery storage system installation" width="800" height="600">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Primary Service</span>
+                <h2 class="cs-title">Solar & Battery Storage Systems</h2>
+                <p class="cs-text">
+                    Complete solar system design, installation, and service for homes and businesses across Puna and the Big Island. Whether you're looking to reduce your HECO bill, achieve full energy independence, or build a resilient backup system for outages — we design the right system for your actual usage and goals.
+                </p>
+                <ul class="cs-brand-list">
+                    <li class="cs-brand-tag">Tesla Powerwall</li>
+                    <li class="cs-brand-tag">Enphase</li>
+                    <li class="cs-brand-tag">Generac</li>
+                    <li class="cs-brand-tag">Sol-Ark</li>
+                    <li class="cs-brand-tag">SMA</li>
+                    <li class="cs-brand-tag">SolarEdge</li>
+                    <li class="cs-brand-tag">Outback</li>
+                </ul>
+                <ul class="cs-detail-list">
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Grid-tied, hybrid, and fully off-grid system design</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Residential, commercial, and industrial scale</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Battery storage sizing and integration</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>System troubleshooting and repair</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Existing system upgrades and expansion</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Equipment supply via RaVolt (more suppliers coming)</li>
+                </ul>
+                <a href="/contact" class="cs-button-solid">Get a Solar Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--         Master Electrician Services          -->
+    <!-- ============================================ -->
+
+    <section class="service-section reverse" id="electrical">
+        <div class="cs-container">
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/construction.jpg" alt="Licensed master electrician work on the Big Island" width="800" height="600">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Licensed & Experienced</span>
+                <h2 class="cs-title">Master Electrician & Electrical Contracting</h2>
+                <p class="cs-text">
+                    With 28+ years as a Licensed Master Electrician and Electrical Contractor — and National exams passed through Prometric, PSI, and the ICC International Code Council — Jeff brings deep, proven expertise to every project. From a simple panel upgrade to a full commercial buildout, we do it right the first time.
+                </p>
+                <ul class="cs-detail-list">
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Residential new construction and remodeling</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Panel upgrades and service changes</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Troubleshooting and repair</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Commercial and light industrial electrical</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Code compliance and inspection prep</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Automation and control panel design/build (UL508A certified)</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>PLC programming and HMI/SCADA systems</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Instrumentation: pressure, temperature, flow, level</li>
+                </ul>
+                <p class="cs-text" style="font-style: italic; font-size: 0.9rem; color: #777; margin-top: 0.5rem;">
+                    Hawaii licensing in progress. Currently licensed in Missouri, Nebraska, and Oklahoma.
+                </p>
+                <a href="/contact" class="cs-button-solid" style="margin-top: 1.5rem;">Request Electrical Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--        Energy Efficiency & Monitoring        -->
+    <!-- ============================================ -->
+
+    <section class="service-section" id="efficiency">
+        <div class="cs-container">
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/cabinets2.jpg" alt="Energy monitoring and efficiency survey" width="800" height="600">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Know Before You Invest</span>
+                <h2 class="cs-title">Energy Efficiency Surveys & Power Monitoring</h2>
+                <p class="cs-text">
+                    Before you spend money on a solar system, it pays to understand what you're actually using. Our energy surveys and power monitoring services give you the data to make smart decisions — and often identify savings that pay for the audit itself.
+                </p>
+                <ul class="cs-detail-list">
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Home and business energy efficiency surveys</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Historical power usage monitoring and analysis</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Custom efficiency reports — with or without written summary</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Circuit-level monitoring available</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Appliance and HVAC load assessment</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Water monitoring systems — coming soon</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Customizable by service size and number of circuits</li>
+                </ul>
+                <p class="cs-text" style="background: #f0faf4; border-left: 3px solid var(--primary); padding: 0.75rem 1rem; margin-top: 1rem; font-size: 0.95rem;">
+                    <strong>Fear of power outages?</strong> Worried about what your appliances and lights are costing you? We'll show you exactly what's happening in your home — and what you can do about it.
+                </p>
+                <a href="/contact" class="cs-button-solid" style="margin-top: 1.5rem;">Schedule an Energy Survey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--          Generator & Backup Power            -->
+    <!-- ============================================ -->
+
+    <section class="service-section reverse" id="generators">
+        <div class="cs-container">
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/construction.jpg" alt="Generator and backup power system installation" width="800" height="600">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Stay Powered</span>
+                <h2 class="cs-title">Generator & Backup Power Systems</h2>
+                <p class="cs-text">
+                    Power outages on the Big Island are a fact of life — especially in Puna. Whether you want a whole-home standby generator, a solar-plus-storage hybrid that keeps you running through anything, or just the right battery backup for your critical loads, we design and install it right.
+                </p>
+                <ul class="cs-brand-list">
+                    <li class="cs-brand-tag">Generac</li>
+                    <li class="cs-brand-tag">Tesla Powerwall</li>
+                    <li class="cs-brand-tag">Sol-Ark</li>
+                    <li class="cs-brand-tag">Outback</li>
+                </ul>
+                <ul class="cs-detail-list">
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Whole-home and partial-load standby generators</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Generac certified (Tech ID: 0052598460)</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Solar + battery + generator hybrid systems</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Automatic transfer switches</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Generator service and maintenance</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Load analysis to right-size your backup system</li>
+                </ul>
+                <a href="/contact" class="cs-button-solid" style="margin-top: 1.5rem;">Talk Backup Power</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            Handyman / Coming Soon            -->
+    <!-- ============================================ -->
+
+    <section class="service-section" id="additional">
+        <div class="cs-container">
+            <picture class="cs-image">
+                <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/cabinets2.jpg" alt="Additional services" width="800" height="600">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Expanding Services</span>
+                <h2 class="cs-title">Additional & Upcoming Services</h2>
+                <p class="cs-text">
+                    We're growing. As we build our presence on the Big Island, we're adding handyman services and working toward becoming a full-service property maintenance company for homes and businesses in Puna and beyond.
+                </p>
+                <ul class="cs-detail-list">
+                    <li class="cs-detail-item"><span class="cs-dot"></span>General handyman services — currently piloting with select clients</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Full-service property maintenance — in development</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Water monitoring systems — coming soon</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Residential thermal storage systems — in R&D (see About page)</li>
+                    <li class="cs-detail-item"><span class="cs-dot"></span>Additional equipment supply lines — in progress</li>
+                </ul>
+                <p class="cs-text">
+                    Have a need that isn't listed here? <strong>Ask us anyway.</strong> Our background spans industrial, agricultural, manufacturing, food processing, and more. If we can't do it, we'll tell you who can.
+                </p>
+                <a href="/contact" class="cs-button-solid" style="margin-top: 1.5rem;">Ask About Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Closing Note                  -->
+    <!-- ============================================ -->
+
+    <section id="services-note">
+        <div class="cs-container">
+            <span class="cs-topper">The Imua Mana Approach</span>
+            <h2 class="cs-title">We Give You the Facts. You Choose the Solution.</h2>
+            <p class="cs-text">
+                We don't believe in one-size-fits-all energy packages or high-pressure sales tactics. Every property is different. Every family has different goals and different budgets. Our job is to assess your situation honestly, explain your options clearly, and then build whatever you decide on — to the highest standard.
+            </p>
+            <a href="/contact" class="cs-button-solid">Start With a Free Consultation</a>
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

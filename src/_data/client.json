@@ -1,91 +1,139 @@
 {
-  "_comment": "This structure combines CodeStitch's existing client.json with enhanced automation data",
-  
-  "name": "Mario's Pizza Restaurant",
-  "email": "info@mariospizza.com",
-  "phoneForTel": "8085551234",
-  "phoneFormatted": "(808) 555-1234",
+  "_comment": "Imua Mana Solutions LLC – Solar & Electrical Power Systems, Puna, Big Island Hawaii",
+
+  "name": "Imua Mana Solutions LLC",
+  "email": "info@imuamanasolutions.com",
+  "phoneForTel": "8085550000",
+  "phoneFormatted": "(808) 555-0000",
   "address": {
-    "lineOne": "123 Main Street",
-    "lineTwo": "Suite 100",
-    "city": "Hilo",
+    "lineOne": "Puna District",
+    "lineTwo": "",
+    "city": "Keaau",
     "state": "HI",
-    "zip": "96720",
-    "mapLink": "https://maps.google.com/?q=123+Main+Street+Hilo+HI"
+    "zip": "96749",
+    "mapLink": "https://maps.google.com/?q=Keaau+HI+96749"
   },
-  "domain": "https://mariospizza.com",
-  
-  "businessType": "Restaurant/Food Service",
-  "tagline": "Authentic Italian Pizza Made Fresh Daily",
-  "hours": "Monday-Friday: 11am-10pm, Saturday-Sunday: 12pm-11pm",
-  "serviceArea": "Hilo and the Big Island",
-  "targetCustomer": "Families and pizza lovers",
-  
+  "domain": "https://imuamanasolutions.com",
+
+  "businessType": "Solar & Electrical Contractor",
+  "tagline": "Harness the Sun. Own Your Power.",
+  "hours": "Monday–Friday: 8am–5pm | Saturday: By Appointment",
+  "serviceArea": "Puna, Hilo, and the Big Island of Hawai'i",
+  "targetCustomer": "Homeowners, farmers, and businesses across Puna and the Big Island seeking energy independence, solar power systems, battery storage, and expert electrical services",
+
   "hero": {
-    "title": "Authentic Italian Pizza Made with Love",
-    "subtitle": "Family-owned since 1985, we bring traditional Italian flavors to Hawai'i with locally-sourced ingredients and time-honored recipes.",
+    "title": "Energy Independence Starts Here",
+    "subtitle": "Imua Mana Solutions brings 28+ years of master electrical expertise to Puna and the Big Island — designing, installing, and servicing complete solar, battery storage, and power systems for homes and businesses ready to take control of their energy.",
     "cta": {
-      "primary": "View Our Menu",
-      "secondary": "Order Now"
+      "primary": "Get a Free Consultation",
+      "secondary": "Explore Our Services"
     }
   },
-  
+
   "services": [
     {
-      "title": "Dine-In Experience",
-      "description": "Enjoy our cozy, family-friendly atmosphere with authentic Italian decor and warm hospitality.",
+      "title": "Solar & Battery Storage Systems",
+      "description": "Complete design, installation, and service of residential and commercial solar systems with battery backup. Certified with Tesla Powerwall, Enphase, Generac, Sol-Ark, SMA, SolarEdge, and Outback — grid-tied to fully off-grid.",
       "icon": "/assets/svgs/service1.svg"
     },
     {
-      "title": "Takeout & Delivery",
-      "description": "Get our delicious pizza delivered hot to your door or pick it up fresh from our kitchen.",
+      "title": "Master Electrician & Electrical Contracting",
+      "description": "Licensed master electrician with 28+ years across residential, commercial, and industrial projects. Panel upgrades, troubleshooting, new construction, remodeling, and code compliance — done right the first time.",
       "icon": "/assets/svgs/service2.svg"
     },
     {
-      "title": "Catering Services",
-      "description": "Perfect for parties, corporate events, and special occasions.",
+      "title": "Energy Efficiency Surveys & Power Monitoring",
+      "description": "Home and business energy audits, historical power usage monitoring, and custom efficiency reports. Know exactly where your energy goes — and where you can save. Water monitoring systems coming soon.",
       "icon": "/assets/svgs/service3.svg"
-    }
-  ],
-  
-  "about": {
-    "title": "About Mario's Pizza Restaurant",
-    "story": "Our journey began in 1985 when Mario brought his family's secret recipes from Naples to the beautiful island of Hawai'i. What started as a small pizzeria has grown into a beloved local institution, but we've never forgotten our roots.",
-    "differentiators": "What sets us apart is our commitment to authenticity combined with aloha spirit. We import our flour directly from Naples, make our dough fresh every morning, and top our pizzas with locally-grown produce from Big Island farms.",
-    "experience": "38 years of pizza perfection"
-  },
-  
-  "stats": [
-    {
-      "number": "38+",
-      "label": "Years Serving Hilo"
     },
     {
-      "number": "50,000+",
-      "label": "Happy Customers"
+      "title": "Generator & Backup Power Systems",
+      "description": "Installation, service, and integration of generators and hybrid backup systems. Generac certified. Whether it's a whole-home standby generator or a hybrid solar-plus-storage setup, we'll keep your lights on.",
+      "icon": "/assets/svgs/service1.svg"
+    }
+  ],
+
+  "about": {
+    "title": "About Imua Mana Solutions LLC",
+    "ownerName": "Jeff",
+    "story": "We didn't just move to Puna — we chose it. After years working in solar and electrical across the mainland, running into wall after wall trying to go off-grid ourselves, we made the move to Hawai'i Island to live the life we were building toward. We purchased land in Puna — and that land is now our home, our office, and our laboratory. When we started building our own systems here, it became clear fast: the Big Island needs what we do. Energy independence isn't a luxury in Puna — it's a practical necessity. And we have the knowledge, the certifications, and the drive to deliver it.",
+    "differentiators": "Three things set Imua Mana apart: depth of knowledge most solar companies can't match — automation, controls, industrial engineering, and 28+ years as a licensed master electrician; total transparency — we give you the real facts and let you choose the solution that fits your life and budget; and relentless innovation — we're actively developing new energy products for Big Island homes, because we believe the future of energy here is still being written.",
+    "experience": "28+ Years as a Licensed Master Electrician & Electrical Contractor"
+  },
+
+  "stats": [
+    {
+      "number": "28+",
+      "label": "Years as a Licensed Master Electrician"
+    },
+    {
+      "number": "6+",
+      "label": "Major Solar Platform Certifications"
+    },
+    {
+      "number": "3MW",
+      "label": "Co-Gen Facility Designed & Built"
     },
     {
       "number": "100%",
-      "label": "Fresh Ingredients"
+      "label": "Big Island Focused & Committed"
     }
   ],
-  
+
+  "certifications": [
+    "Tesla Powerwall & Gateway",
+    "Generac Clean Energy & Generators",
+    "Enphase (All Products)",
+    "Sol-Ark Hybrid Inverters",
+    "SMA Grid-Tied Inverters",
+    "SolarEdge Grid-Tied Inverters",
+    "Outback Hybrid Inverters",
+    "UL508A Industrial Control Panels"
+  ],
+
+  "faq": [
+    {
+      "question": "What areas do you serve?",
+      "answer": "We primarily serve Puna, Hilo, and the greater Big Island of Hawai'i. If you're in a more remote area, reach out — we're often willing to travel for the right project."
+    },
+    {
+      "question": "Can you design a fully off-grid solar system?",
+      "answer": "Absolutely. Off-grid system design is one of our specialties. We'll evaluate your power needs, size your array and battery bank correctly, and build a system that genuinely keeps you independent."
+    },
+    {
+      "question": "What solar brands are you certified with?",
+      "answer": "We are certified and experienced with Tesla Powerwall & Gateway, Generac clean energy products, Enphase, Sol-Ark, SMA, SolarEdge, and Outback. We work across residential, commercial, and utility-scale projects."
+    },
+    {
+      "question": "Do you offer energy efficiency consultations?",
+      "answer": "Yes. We offer home and business energy surveys and historical power monitoring — with or without a full report. We'll show you where your energy is going and where you can save before you invest in a system."
+    },
+    {
+      "question": "Are you a licensed electrician in Hawaii?",
+      "answer": "Hawaii licensing is currently in progress. Jeff holds current Master Electrician and Contractor licenses in Missouri, Nebraska, and Oklahoma, having passed National exams including the ICC International Code Council exam in September 2022."
+    },
+    {
+      "question": "What makes you different from other solar installers?",
+      "answer": "Most solar installers focus on one product line. We bring 28+ years of industrial, commercial, and residential electrical expertise — including automation, controls, PLC programming, and system engineering — to every project. We're also Big Island residents building our own systems here. This is personal for us."
+    }
+  ],
+
   "social": {
-    "facebook": "https://facebook.com/mariospizzahi",
-    "instagram": "https://instagram.com/mariospizzahi",
-    "yelp": "https://yelp.com/biz/marios-pizza-hilo"
+    "facebook": "",
+    "instagram": "",
+    "yelp": ""
   },
-  
+
   "theme": {
-    "primaryColor": "#d62828",
-    "secondaryColor": "#f77f00"
+    "primaryColor": "#1a6b3c",
+    "secondaryColor": "#f5a623"
   },
-  
+
   "seo": {
-    "primaryService": "Pizza Delivery & Catering",
-    "primaryServiceCategory": "Italian Restaurant Services",
-    "title": "Best Pizza in Hilo | Authentic Italian",
-    "description": "Family-owned since 1985, Mario's Pizza serves authentic Italian pizza made fresh daily with locally-sourced ingredients.",
-    "keywords": "pizza hilo, italian restaurant, authentic pizza, family restaurant, wood fired pizza"
+    "primaryService": "Solar Installation & Electrical Contracting",
+    "primaryServiceCategory": "Solar Energy & Electrical Services",
+    "title": "Solar Installation & Master Electrician | Puna & Big Island Hawaii",
+    "description": "Imua Mana Solutions is a licensed master electrician and certified solar installer serving Puna and the Big Island of Hawai'i. Tesla Powerwall, Enphase, Generac, off-grid systems, energy audits, and electrical contracting.",
+    "keywords": "solar installation puna hawaii, solar installer big island, master electrician hawaii island, tesla powerwall hawaii, enphase installer hawaii, off grid solar hawaii, battery storage big island, backup generator puna, energy independence hawaii, electrical contractor keaau, solar panel installation hilo, generac installer hawaii"
   }
 }

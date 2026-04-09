@@ -1,0 +1,217 @@
+---
+title: 'FAQ — Solar, Electrical & Energy Questions'
+description: 'Answers to the most common questions about solar installation, off-grid systems, battery storage, and electrical contracting on the Big Island of Hawai''i — from Imua Mana Solutions.'
+preloadImg: '/assets/images/landing.jpg'
+permalink: 'faq/'
+eleventyNavigation:
+    key: FAQ
+    order: 350
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <style>
+        #faq-page { padding: var(--sectionPadding); }
+        #faq-page .cs-container { width: 92%; max-width: 56rem; margin: auto; }
+        #faq-page .cs-content { text-align: center; margin-bottom: 3rem; }
+
+        .faq-category { margin-bottom: 3rem; }
+        .faq-category-title {
+            font-size: 1.3rem; font-weight: 900; color: var(--primary);
+            text-transform: uppercase; letter-spacing: 0.08em;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem; margin-bottom: 1.5rem;
+        }
+
+        .cs-faq-item { border-bottom: 1px solid #e8e8e8; }
+        .cs-faq-item:first-of-type { border-top: 1px solid #e8e8e8; }
+        .cs-button {
+            width: 100%; background: none; border: none;
+            padding: 1.25rem 0; text-align: left; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+        }
+        .cs-button-text { font-size: 1.05rem; font-weight: 700; color: var(--headerColor); line-height: 1.4em; }
+        .cs-button-icon { width: 1.25rem; height: 1.25rem; flex-shrink: 0; transition: transform 0.3s; color: var(--primary); }
+        .cs-faq-item.active .cs-button-icon { transform: rotate(45deg); }
+        .cs-item-p { font-size: 0.97rem; color: var(--bodyTextColor); line-height: 1.75em; padding-bottom: 1.25rem; display: none; }
+        .cs-faq-item.active .cs-item-p { display: block; }
+
+        #faq-cta { padding: var(--sectionPadding); background: #f7f7f7; text-align: center; }
+        #faq-cta .cs-container { width: 92%; max-width: 44rem; margin: auto; }
+        #faq-cta .cs-text { margin: 1rem auto 2rem; }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <section id="int-hero">
+        <h1 id="home-h">Frequently Asked Questions</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="Solar panels on a Big Island home" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <section id="faq-page">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Straight Answers</span>
+                <h2 class="cs-title">Questions About Solar, Electrical & Energy on the Big Island</h2>
+                <p class="cs-text" style="margin: 0 auto;">
+                    We believe in giving you real, complete information so you can make confident decisions. If your question isn't here, just ask — no obligation.
+                </p>
+            </div>
+
+            <!-- SOLAR & STORAGE -->
+            <div class="faq-category">
+                <div class="faq-category-title">☀️ Solar & Battery Storage</div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">Can you design a fully off-grid solar system?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Absolutely. Off-grid system design is one of our core specialties — it's actually how our company got started. We'll do a proper load analysis, size your solar array and battery bank correctly for your actual usage and location, and build a system that genuinely keeps you independent. No guessing, no undersizing.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What solar brands are you certified with?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">We hold active certifications and hands-on experience with: Tesla Powerwall & Gateway, Generac (all clean energy products and generators — Tech ID: 0052598460), Enphase (all products), Sol-Ark hybrid inverters, SMA grid-tied inverters, SolarEdge grid-tied inverters, and Outback hybrid inverters. We work at residential, commercial, and utility scale. We can help you choose the right platform for your goals and budget — we're not tied to any single manufacturer.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What's the difference between grid-tied, hybrid, and off-grid?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p"><strong>Grid-tied:</strong> Your solar system is connected to HECO. You export excess power and draw from the grid when your panels aren't producing. No battery required, but you lose power during outages (utility safety requirement). <strong>Hybrid:</strong> Grid-connected but with battery storage. You can use your batteries during outages and reduce grid reliance. <strong>Off-grid:</strong> Completely independent from the utility. Requires careful sizing to ensure you have enough power through cloudy days and high-use periods. We design all three and help you understand which makes sense for your property.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">How long does a solar installation typically take?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">The physical installation for a residential system typically takes 1–3 days. The bigger variable is permitting and utility interconnection, which can range from a few weeks to a couple of months depending on your county and utility situation. We'll walk you through the full timeline during your consultation so there are no surprises.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What happens to my excess solar power once the batteries are full?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">On a standard grid-tied or hybrid system, excess power is exported to the utility grid. On a fully off-grid system, the charge controller typically curtails (reduces) production once batteries hit 100%. One of our current R&D projects is a residential thermal storage system that captures that excess energy and uses it for water heating, cooking, and dehumidification — so nothing goes to waste. Stay tuned.</p>
+                </div>
+            </div>
+
+            <!-- ELECTRICAL -->
+            <div class="faq-category">
+                <div class="faq-category-title">⚡ Electrical Services</div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">Are you a licensed electrician in Hawaii?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Hawaii licensing is currently in progress. Jeff holds current Master Electrician and Contractor licenses in Missouri, Nebraska, and Oklahoma, having passed National exams proctored by Prometric, PSI Examination Services, and most recently the ICC International Code Council exam in September 2022. We're committed to full compliance and will update this page once Hawaii licensure is complete.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What types of electrical work do you do?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Residential (new construction, remodeling, panel upgrades, troubleshooting, repair), commercial (office buildings, retail, schools, clinics), industrial and agricultural (automation, control panels, PLC programming, instrumentation), and of course all solar-related electrical work. Our background spans 28+ years across a huge range of project types — if you have an unusual need, ask us.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">Can you help with automation and control systems?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Yes — and this is actually where our background runs deepest. Jeff holds UL508A Industrial Control Panel certification and has designed, built, programmed, and commissioned PLC systems, HMI/SCADA interfaces, motor control panels, VFD systems, and complex automated processes across grain processing, food packaging, wastewater treatment, manufacturing, and agricultural facilities. If you have an automation project, we'd love to hear about it.</p>
+                </div>
+            </div>
+
+            <!-- ENERGY & EFFICIENCY -->
+            <div class="faq-category">
+                <div class="faq-category-title">🔋 Energy Efficiency & Monitoring</div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">Do you offer energy efficiency consultations?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Yes. We offer home and business energy surveys — with or without a written report — along with historical power monitoring. We can set up circuit-level monitoring to show you exactly what each appliance, system, or area of your property is consuming. This data is invaluable before you size a solar system, and often reveals quick wins that reduce your bill immediately.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">How worried should I be about power outages in Puna?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Puna has one of the least reliable grid segments in the state — outages are more frequent here than almost anywhere else in Hawaii. The good news is that solar + battery storage is one of the most effective outage solutions available, and the Big Island's sun makes it extremely viable. Even a modest battery backup can keep your critical loads (refrigerator, lights, well pump, internet) running through most outages. We can help you figure out the right level of backup for your peace of mind and budget.</p>
+                </div>
+            </div>
+
+            <!-- SERVICE AREA & PROCESS -->
+            <div class="faq-category">
+                <div class="faq-category-title">📍 Service Area & Process</div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What areas do you serve?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">We primarily serve Puna, Hilo, and the broader Big Island of Hawai'i. We're based in Puna, so that's our home turf. If you're in Ka'u, North Kohala, or another district, reach out — for larger projects we're often willing to travel. We won't send you away without at least having a conversation.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What does the consultation process look like?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">We start with a conversation — either by phone, email, or an on-site visit — to understand your property, your goals, and your current energy situation. From there we can do a site assessment, review your utility bills, and put together a system design and estimate. We give you the facts and the options; you make the decision on your timeline. No pressure, no expiring offers.</p>
+                </div>
+
+                <div class="cs-faq-item">
+                    <button class="cs-button" aria-expanded="false">
+                        <span class="cs-button-text">What makes Imua Mana different from other solar companies?</span>
+                        <svg class="cs-button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <p class="cs-item-p">Most solar companies on the island started as solar companies. We started as master electricians and industrial systems engineers who then went deep into solar. That means we understand the electrical infrastructure your system connects to at a level most installers don't. We also own land in Puna and are building our own systems here — this isn't a sales job for us, it's personal. And we're developing new products to solve problems we've seen firsthand in this community. We're not going anywhere.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="faq-cta">
+        <div class="cs-container">
+            <span class="cs-topper">Still Have Questions?</span>
+            <h2 class="cs-title">Let's Talk</h2>
+            <p class="cs-text">
+                There's no obligation and no sales pressure. If you have a question about your property, your energy options, or anything electrical — we're happy to give you straight answers.
+            </p>
+            <a href="/contact" class="cs-button-solid">Get in Touch</a>
+        </div>
+    </section>
+
+    <script>
+    document.querySelectorAll('.cs-button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = this.closest('.cs-faq-item');
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.cs-faq-item').forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+            this.setAttribute('aria-expanded', !isActive);
+        });
+    });
+    </script>
+
+{% endblock %}

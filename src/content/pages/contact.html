@@ -1,30 +1,192 @@
 ---
-title: 'Contact'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
+title: 'Contact Us — Free Solar & Electrical Consultation'
+description: 'Contact Imua Mana Solutions for a free solar consultation, electrical contracting quote, or energy efficiency survey on the Big Island of Hawai''i. Serving Puna, Hilo, and beyond.'
+preloadImg: '/assets/images/landing.jpg'
 permalink: 'contact/'
+eleventyNavigation:
+    key: Contact
+    order: 400
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css">
+    <style>
+        #contact-page { padding: var(--sectionPadding); background: #f7f7f7; }
+        #contact-page .cs-container {
+            width: 92%; max-width: 80rem; margin: auto;
+            display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+        }
+        @media (max-width: 900px) {
+            #contact-page .cs-container { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+
+        #contact-page .cs-info-list { margin: 2rem 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 1.5rem; }
+        #contact-page .cs-li { display: flex; align-items: flex-start; gap: 1.25rem; }
+        #contact-page .cs-li:hover .cs-icon-wrapper { transform: scale(1.05); }
+        #contact-page .cs-icon-wrapper {
+            width: 3.5rem; height: 3.5rem; border-radius: 50%;
+            background: var(--primary); display: flex;
+            justify-content: center; align-items: center; flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+        #contact-page .cs-icon { width: 1.25rem; height: 1.25rem; filter: brightness(0) invert(1); display: block; }
+        #contact-page .cs-header { font-size: 1rem; font-weight: 700; color: var(--headerColor); display: block; margin-bottom: 0.25rem; }
+        #contact-page .cs-detail { font-size: 0.95rem; color: var(--bodyTextColor); text-decoration: none; display: block; line-height: 1.5em; }
+        #contact-page .cs-detail:hover { color: var(--primary); }
+
+        #contact-page .cs-service-area {
+            margin-top: 2.5rem; padding: 1.5rem;
+            background: #fff; border-left: 4px solid var(--secondary);
+        }
+        #contact-page .cs-service-area h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--headerColor); }
+        #contact-page .cs-service-area p { font-size: 0.9rem; color: var(--bodyTextColor); line-height: 1.6em; }
+
+        /* Form */
+        #contact-page .cs-form {
+            background: #fff; padding: clamp(1.5rem, 4vw, 3rem);
+            border-radius: 0.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        #contact-page .cs-form h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--headerColor); }
+        #contact-page .cs-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { #contact-page .cs-form-grid { grid-template-columns: 1fr; } }
+        #contact-page .cs-form-grid .cs-full { grid-column: 1 / -1; }
+        #contact-page .cs-label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600; color: var(--headerColor); }
+        #contact-page .cs-input {
+            font-size: 1rem; width: 100%; height: 3rem; padding: 0 1rem;
+            color: var(--headerColor); background: #f7f7f7;
+            border: 1px solid #e0e0e0; border-radius: 0.35rem;
+            box-sizing: border-box; transition: border-color 0.2s;
+        }
+        #contact-page .cs-input:focus { outline: none; border-color: var(--primary); }
+        #contact-page .cs-input::placeholder { color: #aaa; }
+        #contact-page .cs-textarea { height: 8rem; padding: 0.75rem 1rem; resize: vertical; font-family: inherit; }
+        #contact-page .cs-select {
+            font-size: 1rem; width: 100%; height: 3rem; padding: 0 1rem;
+            color: var(--headerColor); background: #f7f7f7;
+            border: 1px solid #e0e0e0; border-radius: 0.35rem;
+            box-sizing: border-box; appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 1rem center;
+        }
+        #contact-page .cs-submit {
+            width: 100%; height: 3.5rem; border: none; cursor: pointer;
+            font-size: 1rem; font-weight: 700; text-transform: uppercase;
+            background: var(--primary); color: #fff; border-radius: 0.35rem;
+            margin-top: 0.5rem; transition: background-color 0.3s;
+        }
+        #contact-page .cs-submit:hover { background: #145530; }
+        #contact-page .cs-disclaimer { font-size: 0.8rem; color: #999; text-align: center; margin-top: 0.75rem; line-height: 1.5em; }
+    </style>
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
-
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="Solar panels on a Big Island home" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
-  
+    <section id="contact-page">
+        <div class="cs-container">
+
+            <!-- Left: Info -->
+            <div class="cs-info">
+                <span class="cs-topper">Get In Touch</span>
+                <h2 class="cs-title">Let's Talk About Your Energy Goals</h2>
+                <p class="cs-text">
+                    No pressure, no sales scripts. Just a real conversation about your property, your situation, and what's actually possible. We're local, we're invested in Puna, and we're here to help — whether you're ready to move forward or just starting to explore your options.
+                </p>
+                <ul class="cs-info-list">
+                    <li class="cs-li">
+                        <div class="cs-icon-wrapper">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-76.svg" alt="phone" width="20" height="20" decoding="async">
+                        </div>
+                        <div>
+                            <span class="cs-header">Phone</span>
+                            <a href="tel:{{ client.phoneForTel }}" class="cs-detail">{{ client.phoneFormatted }}</a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <div class="cs-icon-wrapper">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mail-76.svg" alt="email" width="20" height="20" decoding="async">
+                        </div>
+                        <div>
+                            <span class="cs-header">Email</span>
+                            <a href="mailto:{{ client.email }}" class="cs-detail">{{ client.email }}</a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <div class="cs-icon-wrapper">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/clock-76.svg" alt="hours" width="20" height="20" decoding="async">
+                        </div>
+                        <div>
+                            <span class="cs-header">Hours</span>
+                            <span class="cs-detail">{{ client.hours }}</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="cs-service-area">
+                    <h3>📍 Service Area</h3>
+                    <p>
+                        We're based in Puna and primarily serve <strong>Puna, Hilo, and the Big Island of Hawai'i</strong>. Outside those areas? Reach out anyway — for the right project, we travel.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="cs-form" id="contact-form">
+                <h3>Request a Free Consultation</h3>
+                <form name="Contact Form" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="Contact Form">
+                    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+                    <div class="cs-form-grid">
+                        <label class="cs-label">
+                            First Name *
+                            <input class="cs-input" required type="text" name="first-name" placeholder="First Name">
+                        </label>
+                        <label class="cs-label">
+                            Last Name *
+                            <input class="cs-input" required type="text" name="last-name" placeholder="Last Name">
+                        </label>
+                        <label class="cs-label">
+                            Email *
+                            <input class="cs-input" required type="email" name="email" placeholder="your@email.com">
+                        </label>
+                        <label class="cs-label">
+                            Phone
+                            <input class="cs-input" type="tel" name="phone" placeholder="(808) 000-0000">
+                        </label>
+                        <label class="cs-label cs-full">
+                            I'm interested in...
+                            <select class="cs-select cs-input" name="service-interest">
+                                <option value="">Select a service (optional)</option>
+                                <option value="solar-storage">Solar & Battery Storage System</option>
+                                <option value="off-grid">Off-Grid Solar System</option>
+                                <option value="electrical">Electrical Contracting / Master Electrician</option>
+                                <option value="energy-audit">Energy Efficiency Survey / Audit</option>
+                                <option value="generator">Generator / Backup Power</option>
+                                <option value="monitoring">Power Monitoring</option>
+                                <option value="other">Other / Not Sure Yet</option>
+                            </select>
+                        </label>
+                        <label class="cs-label cs-full">
+                            Tell us about your project *
+                            <textarea class="cs-input cs-textarea" required name="message" placeholder="Tell us about your property, your energy goals, and any questions you have. The more detail, the better we can prepare for our conversation."></textarea>
+                        </label>
+                    </div>
+                    <button class="cs-submit" type="submit">Send My Request</button>
+                    <p class="cs-disclaimer">We typically respond within 1 business day. No spam, no pressure — just straight answers.</p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
 {% endblock %}

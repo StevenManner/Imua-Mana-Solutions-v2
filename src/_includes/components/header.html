@@ -7,11 +7,9 @@
     <a href="/" class="cs-logo cs-desktop" aria-label="back to home">
         <div class="cs-logo-wrapper">
             {% if client.logo %}
-            <!--Custom Logo-->
             <img class="cs-default" src="{{ client.logo }}" alt="{{ client.name }} logo" width="210" height="29" aria-hidden="true" decoding="async">
             <img class="cs-dark" src="{{ client.logo }}" alt="{{ client.name }} logo" width="210" height="29" aria-hidden="true" decoding="async">
             {% else %}
-            <!--Text Logo-->
             <span class="cs-logo-name">{{ client.name }}</span>
             {% endif %}
         </div>
@@ -26,28 +24,18 @@
                     <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="facebook" width="12" height="12" aria-hidden="true" decoding="async">
                 </a>
                 {% endif %}
-                {% if client.social.twitter %}
-                <a href="{{ client.social.twitter }}" class="cs-social-link" target="_blank" rel="noopener" aria-label="visit twitter profile">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg" alt="twitter" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-                {% endif %}
                 {% if client.social.instagram %}
                 <a href="{{ client.social.instagram }}" class="cs-social-link" target="_blank" rel="noopener" aria-label="visit instagram profile">
                     <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="instagram" width="12" height="12" aria-hidden="true" decoding="async">
                 </a>
                 {% endif %}
-                {% if client.social.youtube %}
-                <a href="{{ client.social.youtube }}" class="cs-social-link" target="_blank" rel="noopener" aria-label="visit youtube channel">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg" alt="youtube" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-                {% endif %}
             </div>
             {% endif %}
             <ul class="cs-location">
-                {% if client.address.lineOne %}
+                {% if client.serviceArea %}
                 <li class="cs-item cs-remove">
                     <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-pin1.svg" alt="location icon" width="20" height="20" aria-hidden="true" decoding="async">
-                    {{ client.address.lineOne }}{% if client.address.city %}, {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}{% endif %}
+                    Serving {{ client.serviceArea }}
                 </li>
                 {% endif %}
                 {% if client.hours %}
@@ -62,18 +50,15 @@
             <a href="/" class="cs-logo cs-mobile" aria-label="back to home">
                 <div class="cs-logo-wrapper">
                     {% if client.logo %}
-                    <!--Custom Logo-->
                     <img class="cs-default" src="{{ client.logo }}" alt="{{ client.name }} logo" width="210" height="29" aria-hidden="true" decoding="async">
                     <img class="cs-dark" src="{{ client.logo }}" alt="{{ client.name }} logo" width="210" height="29" aria-hidden="true" decoding="async">
                     {% else %}
-                    <!--Text Logo-->
                     <span class="cs-logo-name">{{ client.name }}</span>
                     {% endif %}
                 </div>
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">
-                <!--Mobile Nav Toggle-->
                 <button class="cs-toggle" aria-label="mobile menu toggle">
                     <div class="cs-box" aria-hidden="true">
                         <span class="cs-line cs-line1" aria-hidden="true"></span>
@@ -81,15 +66,11 @@
                         <span class="cs-line cs-line3" aria-hidden="true"></span>
                     </div>
                 </button>
-                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
                 <div class="cs-ul-wrapper">
                     <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                         <li class="cs-li">
-                            <a href="/" class="cs-li-link ">
-                                Home
-                            </a>
+                            <a href="/" class="cs-li-link {{ 'cs-active' if '/' == page.url }}">Home</a>
                         </li>
-                        <!--Services Dropdown with smooth scroll links-->
                         <li class="cs-li cs-dropdown" tabindex="0">
                             <span class="cs-li-link">
                                 Services
@@ -97,27 +78,30 @@
                             </span>
                             <ul class="cs-drop-ul">
                                 <li class="cs-drop-li">
-                                    <a href="/Services" class="cs-li-link cs-drop-link cs-smooth-scroll">Services Overview</a>
+                                    <a href="/services" class="cs-li-link cs-drop-link">All Services</a>
                                 </li>
                                 <li class="cs-drop-li">
-                                    <a href="/What-We-Offer" class="cs-li-link cs-drop-link cs-smooth-scroll">What We Offer</a>
+                                    <a href="/services#solar" class="cs-li-link cs-drop-link">Solar & Storage</a>
+                                </li>
+                                <li class="cs-drop-li">
+                                    <a href="/services#electrical" class="cs-li-link cs-drop-link">Electrical Contracting</a>
+                                </li>
+                                <li class="cs-drop-li">
+                                    <a href="/services#efficiency" class="cs-li-link cs-drop-link">Energy Efficiency</a>
+                                </li>
+                                <li class="cs-drop-li">
+                                    <a href="/services#generators" class="cs-li-link cs-drop-link">Generators & Backup</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="cs-li">
-                            <a href="/about" class="cs-li-link ">
-                                About
-                            </a>
+                            <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">About</a>
                         </li>
                         <li class="cs-li">
-                            <a href="/gallery" class="cs-li-link ">
-                                Gallery
-                            </a>
+                            <a href="/faq" class="cs-li-link {{ 'cs-active' if 'faq' == page.fileSlug }}">FAQ</a>
                         </li>
                         <li class="cs-li">
-                            <a href="/FAQ" class="cs-li-link ">
-                                FAQ
-                            </a>
+                            <a href="/contact" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -133,8 +117,8 @@
                 </div>
             </a>
             {% endif %}
-            <a href="#cta-1693" class="cs-button-border cs-smooth-scroll">
-                Get In Touch
+            <a href="/contact" class="cs-button-border">
+                Free Consultation
                 <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/up-right-arrow.svg" alt="arrow icon" width="20" height="20">
             </a>
         </div>
@@ -154,129 +138,16 @@
     {% endif %}
 </header>
 
-<!-- ============================================ -->
-<!--              Smooth Scroll Script             -->
-<!-- ============================================ -->
-
-<script>
-    // Smooth scroll functionality for one-page navigation
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get all smooth scroll links
-        const smoothScrollLinks = document.querySelectorAll('.cs-smooth-scroll');
-        
-        // Add click event to each link
-        smoothScrollLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Get target section
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    // Close mobile menu if open
-                    const nav = document.querySelector('#cs-expanded');
-                    if (nav) {
-                        nav.setAttribute('aria-expanded', 'false');
-                        document.body.classList.remove('cs-open');
-                    }
-                    
-                    // Close any open dropdowns
-                    const dropdowns = document.querySelectorAll('.cs-dropdown');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('cs-active');
-                    });
-                    
-                    // Smooth scroll to section
-                    const headerHeight = document.querySelector('#cs-navigation').offsetHeight;
-                    const targetPosition = targetSection.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update URL without page jump
-                    history.pushState(null, null, targetId);
-                }
-            });
-        });
-        
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.cs-toggle');
-        const navigation = document.querySelector('#cs-expanded');
-        
-        if (menuToggle && navigation) {
-            menuToggle.addEventListener('click', function() {
-                const expanded = navigation.getAttribute('aria-expanded') === 'true';
-                navigation.setAttribute('aria-expanded', !expanded);
-                document.body.classList.toggle('cs-open');
-            });
-        }
-        
-        // Dropdown functionality
-        const dropdowns = document.querySelectorAll('.cs-dropdown');
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function(e) {
-                // Only toggle on the span, not the links
-                if (e.target.closest('.cs-drop-link')) return;
-                
-                this.classList.toggle('cs-active');
-            });
-        });
-        
-        // Highlight active section in navigation
-        function highlightActiveSection() {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.cs-smooth-scroll');
-            
-            let current = '';
-            const scrollPosition = window.scrollY + 150; // Offset for header
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('cs-active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('cs-active');
-                }
-            });
-        }
-        
-        // Update active section on scroll
-        window.addEventListener('scroll', highlightActiveSection);
-        highlightActiveSection(); // Initial check
-    });
-</script>
-
 <style>
-    /* Add text logo styling */
     .cs-logo-name {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--primary, #1a1a1a);
+        font-size: 1.3rem;
+        font-weight: 900;
+        color: var(--primary);
         white-space: nowrap;
+        letter-spacing: -0.02em;
     }
-    
-    /* Smooth scroll behavior */
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    /* Active link styling */
-    .cs-li-link.cs-active {
-        color: var(--primary, #d62828);
-        font-weight: 600;
-    }
-    
-    /* Dropdown active state */
+    html { scroll-behavior: smooth; }
+    .cs-li-link.cs-active { color: var(--primary); font-weight: 600; }
     .cs-dropdown.cs-active .cs-drop-ul {
         height: auto;
         opacity: 1;
@@ -284,3 +155,36 @@
         transform: scaleY(1);
     }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.cs-toggle');
+    const navigation = document.querySelector('#cs-expanded');
+    const navEl = document.querySelector('#cs-navigation');
+
+    if (menuToggle && navigation) {
+        menuToggle.addEventListener('click', function() {
+            const expanded = navigation.getAttribute('aria-expanded') === 'true';
+            navigation.setAttribute('aria-expanded', !expanded);
+            document.body.classList.toggle('cs-open');
+            navEl.classList.toggle('cs-active');
+        });
+    }
+
+    const dropdowns = document.querySelectorAll('.cs-dropdown');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(e) {
+            if (e.target.closest('.cs-drop-link')) return;
+            this.classList.toggle('cs-active');
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 60) {
+            navEl.classList.add('scroll');
+        } else {
+            navEl.classList.remove('scroll');
+        }
+    });
+});
+</script>
