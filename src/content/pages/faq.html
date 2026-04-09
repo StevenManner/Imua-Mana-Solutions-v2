@@ -203,13 +203,22 @@ eleventyNavigation:
     </section>
 
     <script>
-    document.querySelectorAll('.cs-button').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const item = this.closest('.cs-faq-item');
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.cs-faq-item').forEach(i => i.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-            this.setAttribute('aria-expanded', !isActive);
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('#faq-page .cs-faq-item .cs-button').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.closest('.cs-faq-item');
+                if (!item) return;
+                var isActive = item.classList.contains('active');
+                document.querySelectorAll('#faq-page .cs-faq-item').forEach(function(i) {
+                    i.classList.remove('active');
+                    var b = i.querySelector('.cs-button');
+                    if (b) b.setAttribute('aria-expanded', 'false');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
         });
     });
     </script>
