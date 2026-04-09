@@ -1,0 +1,91 @@
+{
+  "_comment": "This structure combines CodeStitch's existing client.json with enhanced automation data",
+  
+  "name": "Mario's Pizza Restaurant",
+  "email": "info@mariospizza.com",
+  "phoneForTel": "8085551234",
+  "phoneFormatted": "(808) 555-1234",
+  "address": {
+    "lineOne": "123 Main Street",
+    "lineTwo": "Suite 100",
+    "city": "Hilo",
+    "state": "HI",
+    "zip": "96720",
+    "mapLink": "https://maps.google.com/?q=123+Main+Street+Hilo+HI"
+  },
+  "domain": "https://mariospizza.com",
+  
+  "businessType": "Restaurant/Food Service",
+  "tagline": "Authentic Italian Pizza Made Fresh Daily",
+  "hours": "Monday-Friday: 11am-10pm, Saturday-Sunday: 12pm-11pm",
+  "serviceArea": "Hilo and the Big Island",
+  "targetCustomer": "Families and pizza lovers",
+  
+  "hero": {
+    "title": "Authentic Italian Pizza Made with Love",
+    "subtitle": "Family-owned since 1985, we bring traditional Italian flavors to Hawai'i with locally-sourced ingredients and time-honored recipes.",
+    "cta": {
+      "primary": "View Our Menu",
+      "secondary": "Order Now"
+    }
+  },
+  
+  "services": [
+    {
+      "title": "Dine-In Experience",
+      "description": "Enjoy our cozy, family-friendly atmosphere with authentic Italian decor and warm hospitality.",
+      "icon": "/assets/svgs/service1.svg"
+    },
+    {
+      "title": "Takeout & Delivery",
+      "description": "Get our delicious pizza delivered hot to your door or pick it up fresh from our kitchen.",
+      "icon": "/assets/svgs/service2.svg"
+    },
+    {
+      "title": "Catering Services",
+      "description": "Perfect for parties, corporate events, and special occasions.",
+      "icon": "/assets/svgs/service3.svg"
+    }
+  ],
+  
+  "about": {
+    "title": "About Mario's Pizza Restaurant",
+    "story": "Our journey began in 1985 when Mario brought his family's secret recipes from Naples to the beautiful island of Hawai'i. What started as a small pizzeria has grown into a beloved local institution, but we've never forgotten our roots.",
+    "differentiators": "What sets us apart is our commitment to authenticity combined with aloha spirit. We import our flour directly from Naples, make our dough fresh every morning, and top our pizzas with locally-grown produce from Big Island farms.",
+    "experience": "38 years of pizza perfection"
+  },
+  
+  "stats": [
+    {
+      "number": "38+",
+      "label": "Years Serving Hilo"
+    },
+    {
+      "number": "50,000+",
+      "label": "Happy Customers"
+    },
+    {
+      "number": "100%",
+      "label": "Fresh Ingredients"
+    }
+  ],
+  
+  "social": {
+    "facebook": "https://facebook.com/mariospizzahi",
+    "instagram": "https://instagram.com/mariospizzahi",
+    "yelp": "https://yelp.com/biz/marios-pizza-hilo"
+  },
+  
+  "theme": {
+    "primaryColor": "#d62828",
+    "secondaryColor": "#f77f00"
+  },
+  
+  "seo": {
+    "primaryService": "Pizza Delivery & Catering",
+    "primaryServiceCategory": "Italian Restaurant Services",
+    "title": "Best Pizza in Hilo | Authentic Italian",
+    "description": "Family-owned since 1985, Mario's Pizza serves authentic Italian pizza made fresh daily with locally-sourced ingredients.",
+    "keywords": "pizza hilo, italian restaurant, authentic pizza, family restaurant, wood fired pizza"
+  }
+}

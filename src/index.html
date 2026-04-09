@@ -1,0 +1,359 @@
+---
+title: '{{ client.name }} | {{ client.seo.title }}'
+description: '{{ client.seo.description }}'
+preloadImg: '/assets/images/landing.jpg'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css" />
+    <link rel="stylesheet" href="/assets/css/critical.css" />
+    <link rel="stylesheet" href="/assets/css/client-theme.css" />
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero">
+        <div class="cs-container">
+            <div class="cs-flex-group">
+                <span class="cs-topper">{{ client.seo.primaryService }} in {{ client.address.city }}, {{ client.address.state }} — Trusted Local Experts</span>
+                <h1 class="cs-title">{{ client.hero.title }}</h1>
+                <p class="cs-text">
+                    {{ client.hero.subtitle }} Providing high-quality {{ client.seo.primaryServiceCategory | lower }} with authentic recipes, fresh ingredients, and dependable results for {{ client.targetCustomer | lower }} in {{ client.serviceArea }}.
+                </p>
+                <a href="/about" class="cs-button-solid">{{ client.hero.cta.primary }}</a>
+                <a href="/contact" class="cs-button-transparent">
+                    <img
+                    class="cs-img"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+                    alt="play icon"
+                    width="17"
+                    height="17" />
+                    {{ client.hero.cta.secondary }}
+                </a>
+            </div>
+        </div>
+
+        <!-- Background Image -->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="{{ client.name }}" width="2500" height="1667" loading="eager">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Services                    -->
+    <!-- ============================================ -->
+
+    <section id="services" class="services">
+        <!-- Services dynamically populated from client data -->
+        {% for service in client.services %}
+        <div class="card">
+            <picture>
+                <img
+                aria-hidden="true"
+                decoding="async"
+                src="{{ service.icon }}"
+                alt="{{ service.title }}"
+                width="48"
+                height="48" />
+            </picture>
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+   <!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1977">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our {{ client.seo.primaryServiceCategory }} Services</span>
+            <h2 class="cs-title">Explore Our Services</h2>
+            <p class="cs-text">
+                We offer comprehensive dining and catering services you can count on, such as:
+            </p>
+        </div>
+        <div class="cs-wrapper">
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tooth-gum.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Authentic Wood-Fired Pizza</h3>
+                        <p class="cs-li-text">
+                            Traditional Neapolitan-style pizzas made with imported Italian flour and fresh local toppings
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/braces-rubber-bands.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Fresh Pasta & Entrees</h3>
+                        <p class="cs-li-text">
+                            House-made pasta dishes and classic Italian entrees prepared with traditional recipes
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/tooth-loosen.svg" decoding="async" alt="icon" width="80" height="80" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Family-Style Dining</h3>
+                        <p class="cs-li-text">
+                            Cozy atmosphere perfect for families, with kid-friendly options and generous portions
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Event Catering Services</h3>
+                        <p class="cs-item-text">
+                            Perfect for parties, corporate events, and special occasions with customizable menus
+                        </p>
+                    </div>
+                    <a href="/contact" class="cs-link">
+                        Learn More
+                    </a>
+                    <picture class="cs-picture">
+                        <img class="cs-image" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/implant.png" alt="icon" width="181"
+                        height="102">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Fast Delivery & Takeout</h3>
+                        <p class="cs-item-text">
+                            Hot, fresh pizza delivered to your door or ready for quick pickup
+                        </p>
+                    </div>
+                    <a href="/contact" class="cs-link">
+                        Learn More
+                    </a>
+                    <picture class="cs-picture">
+                        <img class="cs-image" loading="lazy" decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/toothache.png" alt="icon"
+                        width="181" height="102">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+        <div class="cs-card-container">
+            <div class="cs-card-content">
+                <h2 class="cs-h2">Order Delicious Italian Food Today</h2>
+                <p class="cs-card-text">
+                    {{ client.tagline }} — {{ client.about.story }}
+                </p>
+                <div class="cs-button-flex">
+                    <a class="cs-button-solid" href="/contact">{{ client.hero.cta.primary }}</a>
+                    <a class="cs-phone" href="tel:{{ client.phoneForTel }}">
+                        <picture class="cs-card-pic">
+                            <img class="cs-card-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-phone.svg" decoding="async" alt="icon" width="20" height="20" loading="lazy">
+                        </picture>
+                        <div class="cs-phone-wrapper">
+                            <span class="cs-link-content">Call Anytime</span>
+                            <span class="cs-phone-number">{{ client.phoneFormatted }}</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+    <!-- ============================================ -->
+    <!--            Extra Content Section             -->
+    <!-- ============================================ -->
+
+    <section id="sbs-r">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="{{ client.name }}" loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="{{ client.name }}" loading="lazy" width="400" height="560">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">Why {{ client.targetCustomer }} Trust Us</span>
+                <h2 class="cs-title">{{ client.about.differentiators }}</h2>
+                <p class="cs-text">
+                    {{ client.about.experience }} — {{ client.about.story }}
+                </p>
+                <p class="cs-text">
+                    Servicing {{ client.serviceArea }}.
+                </p>
+                <a href="/contact" class="cs-button-solid">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery">
+        <div class="cs-container">
+            <span class="cs-topper">Real Food From Our Kitchen</span>
+            <h2 class="cs-title">See Our Delicious Creations</h2>
+            <div class="cs-image-group">
+                <!-- Row 1-->
+                <div class="cs-row cs-row-1">
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                </div>
+                <!-- Row 2 -->
+                <div class="cs-row cs-row-2">
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                </div>
+                <!-- Row 3 -->
+                <div class="cs-row cs-row-3">
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="Mario's Pizza food" loading="lazy" width="400" height="560">
+                    </picture>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1720">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-button-group">
+                <div class="cs-flex">
+                    <button class="cs-option" data-filter="one">
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/plus.svg" alt="plus graphic" width="12" height="12" decoding="async" aria-hidden="true">
+                          FAQ
+                    </button>
+                </div>
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people2.jpg" alt="people" width="353" height="493">
+                </picture>
+            </div>
+            <div class="cs-wrapper">
+                <ul class="cs-faq-group" data-category="one">
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What are your hours of operation?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            {{ client.hours }}</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Do you offer delivery?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Yes! We offer delivery throughout {{ client.serviceArea }}. You can also pick up your order for added convenience.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Do you cater events?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Absolutely! We provide catering services for parties, corporate events, and special occasions. Contact us for custom menu options.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                               What areas do you serve?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            We serve {{ client.serviceArea }}.</p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
